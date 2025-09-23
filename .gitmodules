@@ -1,0 +1,3 @@
+[submodule "iOSwatchOSInterface"]
+	path = iOSwatchOSInterface
+	url = https://github.com/emilald/OpenEarableiOSwatchOS
