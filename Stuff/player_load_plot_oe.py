@@ -13,7 +13,6 @@ LABELS = {
     "bone_acc": ['bone_acc.x', 'bone_acc.y', 'bone_acc.z']
 }
 
-# --- Hjälpklass ---
 class SensorAccessor:
     def __init__(self, df: pd.DataFrame, labels: list):
         self._df = df
@@ -44,7 +43,6 @@ class SensorAccessor:
     def to_dataframe(self):
         return self._full_df
 
-# --- Huvudklass för .oe ---
 class SensorDataset:
     SENSOR_SID = {"imu": 0, "barometer": 1, "microphone": 2, "ppg": 4, "bone_acc": 7}
 
@@ -90,8 +88,7 @@ class SensorDataset:
 
     def get_dataframe(self):
         return self.df
-
-# --- Player Load funktion ---
+        
 def compute_player_load(df: pd.DataFrame):
     dx = df["acc.x"].diff()
     dy = df["acc.y"].diff()
@@ -100,7 +97,6 @@ def compute_player_load(df: pd.DataFrame):
     pl_total = pl_series.sum()
     return pl_series, pl_total
 
-# --- Huvudkörning ---
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Compute and plot Player Load from .oe file")
     parser.add_argument("--in", dest="in_path", required=True, help="Path to .oe file")
@@ -141,3 +137,4 @@ if __name__ == "__main__":
 
     plt.tight_layout()
     plt.show()
+
