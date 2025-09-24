@@ -1,4 +1,4 @@
-#Kör med python pl_oe_min.py --infile sensor_log_.oe
+#Kör med python pl_oe_min.py --infile filnamn.oe
 
 import struct, os, argparse
 import numpy as np
@@ -89,3 +89,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
