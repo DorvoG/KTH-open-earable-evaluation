@@ -87,3 +87,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Run with python pl_oe_min.py --infile run_jump_still.oe (need matplotlib installed, Install with "pip install matplotlib pandas numpy" in Powershell)
+
+
+
